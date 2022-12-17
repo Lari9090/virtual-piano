@@ -20,7 +20,7 @@ body {
 .fundo {
   border-radius: 20px;
   padding: 35px 40px;
-  background: rgb(13, 19, 31);
+  background: rgb(41, 53, 77);
 }
 
 .fundo header {
@@ -47,8 +47,14 @@ header .coluna span {
 }
 
 .volume-slider input {
-  accent-color: #fff;
+  appearance: none;
+  width: 120px;
+  height: 10px;
+  border-radius: 2px;
+  position: relative;
   outline: none;
+  cursor: pointer;
+  background-color: rgb(179, 179, 194);
 }
 
 .teclas-checkbox input {
