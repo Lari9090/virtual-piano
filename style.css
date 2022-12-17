@@ -132,6 +132,8 @@ header .coluna span {
   display: none;
 }
 
+/* Responsividade em diversas telas */
+
 @media screen and (max-width: 815px) {
   .fundo {
     padding: 25px;
