@@ -2,6 +2,8 @@ const pianoTeclas = document.querySelectorAll(".piano-teclas .key"),
   volumeSlider = document.querySelector(".volume-slider input"),
   keyCheckbox = document.querySelector(".teclas-checkbox input");
 
+
+
 let allKeys = [],
   audio = new Audio("tunes/a.wav"); //colocando o som 'a' como padrão
 
@@ -17,11 +19,15 @@ const playTune = (key) => {
   }, 150);
 };
 
+
+
 pianoTeclas.forEach((key) => {
   allKeys.push(key.dataset.key); //adicionando os valores do data-key na array allKeys
   // usando o data-key como agumento para a função playTune
   key.addEventListener("click", () => playTune(key.dataset.key));
 });
+
+
 
 const showHideKeys = () => {
   pianoTeclas.forEach((key) => key.classList.toggle("hide"));
@@ -34,6 +40,7 @@ const handleVolume = (e) => {
 const pressedKey = (e) => {
   if (allKeys.includes(e.key)) playTune(e.key);
 };
+
 
 keyCheckbox.addEventListener("click", showHideKeys);
 volumeSlider.addEventListener("input", handleVolume);
